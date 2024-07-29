@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color"
+    android:id="@+id/main">
+
+    <!-- Camera View for QR Code Scanning -->
+    <FrameLayout
+        android:id="@+id/camera_frame"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/black">
+
+        <!-- Placeholder for Camera Preview -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera Preview"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <!-- Manual Product Code Entry -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/camera_frame"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Product Code"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/verify_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verify Product"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.MaterialComponents.Button"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Button to Initiate Scan or Verification -->
+    <Button
+        android:id="@+id/scan_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan QR Code"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_below="@id/camera_frame"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.MaterialComponents.Button"/>
+</RelativeLayout>

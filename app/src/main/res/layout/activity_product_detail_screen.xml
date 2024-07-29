@@ -1,0 +1,208 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color"
+    android:id="@+id/main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Product Image Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/productss"
+                android:contentDescription="@string/product_description" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Product Information Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/section_background"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Product Name -->
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Product Description -->
+            <TextView
+                android:id="@+id/product_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Description"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/colorSecondary" />
+
+            <!-- Authenticity Status -->
+            <TextView
+                android:id="@+id/authenticity_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Authenticity Status: Genuine"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+
+        <!-- Manufacturing Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/section_background"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/manufacturing_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manufacturing Details"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/manufacturing_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date: 01-01-2024"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/colorSecondary" />
+
+            <TextView
+                android:id="@+id/manufacturing_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location: XYZ Factory"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/colorSecondary" />
+        </LinearLayout>
+
+        <!-- Supply Chain Journey Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/section_background"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/supply_chain_journey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Supply Chain Journey"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/entity1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entity 1: Manufacturer"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/colorSecondary" />
+
+            <TextView
+                android:id="@+id/entity2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entity 2: Distributor"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/colorSecondary" />
+
+            <TextView
+                android:id="@+id/entity3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entity 3: Retailer"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/colorSecondary" />
+        </LinearLayout>
+
+        <!-- Verification History Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/section_background"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/verification_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verification History"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/verification_entry1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verified on: 01-01-2024 by User1"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/colorSecondary" />
+
+            <TextView
+                android:id="@+id/verification_entry2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verified on: 02-01-2024 by User2"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/colorSecondary" />
+        </LinearLayout>
+
+        <!-- Report Issues Button -->
+        <Button
+            android:id="@+id/report_issue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report Issue"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MaterialComponents.Button" />
+    </LinearLayout>
+</ScrollView>
